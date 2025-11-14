@@ -1,0 +1,323 @@
+{
+  "info": {
+    "name": "Sistema Historias Clínicas API",
+    "description": "Colección completa de endpoints para el Sistema de Gestión de Historias Clínicas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Pacientes",
+      "item": [
+        {
+          "name": "Listar todos los pacientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pacientes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "pacientes"]
+            }
+          }
+        },
+        {
+          "name": "Obtener paciente por DNI",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pacientes/12345678",
+              "host": ["{{base_url}}"],
+              "path": ["api", "pacientes", "12345678"]
+            }
+          }
+        },
+        {
+          "name": "Registrar nuevo paciente",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pacDni\": \"12345678\",\n  \"pacNombre\": \"Juan\",\n  \"pacApellidoPaterno\": \"Pérez\",\n  \"pacApellidoMaterno\": \"García\",\n  \"pacDireccion\": \"Av. Principal 123\",\n  \"pacTelefono\": \"987654321\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pacientes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "pacientes"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar paciente",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pacNombre\": \"Juan Carlos\",\n  \"pacApellidoPaterno\": \"Pérez\",\n  \"pacApellidoMaterno\": \"García\",\n  \"pacDireccion\": \"Av. Principal 456\",\n  \"pacTelefono\": \"987654321\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pacientes/12345678",
+              "host": ["{{base_url}}"],
+              "path": ["api", "pacientes", "12345678"]
+            }
+          }
+        },
+        {
+          "name": "Eliminar paciente",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pacientes/12345678",
+              "host": ["{{base_url}}"],
+              "path": ["api", "pacientes", "12345678"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Médicos",
+      "item": [
+        {
+          "name": "Listar todos los médicos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicos"]
+            }
+          }
+        },
+        {
+          "name": "Obtener médico por CMP",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicos/12345",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicos", "12345"]
+            }
+          }
+        },
+        {
+          "name": "Buscar médicos por especialidad",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicos/especialidad/Cardiología",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicos", "especialidad", "Cardiología"]
+            }
+          }
+        },
+        {
+          "name": "Registrar nuevo médico",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"medCmp\": \"12345\",\n  \"medNombre\": \"María\",\n  \"medApellidos\": \"González Rodríguez\",\n  \"espeNombre\": \"Cardiología\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/medicos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicos"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar médico",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"medNombre\": \"María Elena\",\n  \"medApellidos\": \"González Rodríguez\",\n  \"espeNombre\": \"Cardiología\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/medicos/12345",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicos", "12345"]
+            }
+          }
+        },
+        {
+          "name": "Eliminar médico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicos/12345",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicos", "12345"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Historias Clínicas",
+      "item": [
+        {
+          "name": "Listar todas las historias clínicas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas"]
+            }
+          }
+        },
+        {
+          "name": "Obtener historia clínica por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas", "1"]
+            }
+          }
+        },
+        {
+          "name": "Registrar nueva historia clínica",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pacDni\": \"12345678\",\n  \"medCmp\": \"12345\",\n  \"histFechaAtencion\": \"2025-11-13\",\n  \"histDiagnostico\": \"Hipertensión arterial grado 1. Paciente presenta presión arterial elevada de manera constante durante los últimos 3 meses.\",\n  \"histAnalisis\": \"Presión arterial: 145/95 mmHg. Frecuencia cardíaca: 82 lpm. Sin alteraciones en electrocardiograma.\",\n  \"histTratamiento\": \"Enalapril 10mg cada 12 horas por vía oral. Dieta hiposódica. Control en 30 días. Realizar actividad física moderada 30 minutos diarios.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar historia clínica",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pacDni\": \"12345678\",\n  \"medCmp\": \"12345\",\n  \"histFechaAtencion\": \"2025-11-13\",\n  \"histDiagnostico\": \"Hipertensión arterial grado 2 (actualizado). Paciente presenta presión arterial elevada.\",\n  \"histAnalisis\": \"Presión arterial: 155/100 mmHg. Frecuencia cardíaca: 85 lpm.\",\n  \"histTratamiento\": \"Ajuste de medicación: Enalapril 20mg cada 12 horas. Control en 15 días.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas", "1"]
+            }
+          }
+        },
+        {
+          "name": "Eliminar historia clínica",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas", "1"]
+            }
+          }
+        },
+        {
+          "name": "Buscar historias por paciente",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas/paciente/12345678",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas", "paciente", "12345678"]
+            }
+          }
+        },
+        {
+          "name": "Buscar historias por médico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas/medico/12345",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas", "medico", "12345"]
+            }
+          }
+        },
+        {
+          "name": "Buscar historias por rango de fechas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/historias-clinicas/fechas?inicio=2025-01-01&fin=2025-12-31",
+              "host": ["{{base_url}}"],
+              "path": ["api", "historias-clinicas", "fechas"],
+              "query": [
+                {
+                  "key": "inicio",
+                  "value": "2025-01-01"
+                },
+                {
+                  "key": "fin",
+                  "value": "2025-12-31"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}

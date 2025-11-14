@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "abee4c3e-15b6-4876-8d00-9dc04419be81",
+		"name": "Clinica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37857222"
+	},
+	"item": [
+		{
+			"name": "Historias-clinicas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/historias-clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"historias-clinicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pacDni\": \"12345678\",\n  \"medCmp\": \"12345\",\n  \"histFechaAtencion\": \"2025-11-13\",\n  \"histDiagnostico\": \"Hipertensión arterial grado 1. Paciente presenta presión arterial elevada de manera constante durante los últimos 3 meses.\",\n  \"histAnalisis\": \"Presión arterial: 145/95 mmHg. Frecuencia cardíaca: 82 lpm. Sin alteraciones en electrocardiograma.\",\n  \"histTratamiento\": \"Enalapril 10mg cada 12 horas por vía oral. Dieta hiposódica. Control en 30 días. Realizar actividad física moderada 30 minutos diarios.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/api/historias-clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"historias-clinicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pacDni\": \"87654321\",\n  \"medCmp\": \"67890\",\n  \"histFechaAtencion\": \"2025-11-12\",\n  \"histDiagnostico\": \"Infección respiratoria aguda resuelta. Paciente presenta mejoría notable después de 3 días de tratamiento sintomático.\",\n  \"histAnalisis\": \"Temperatura normal: 36.8°C. Frecuencia respiratoria: 16 rpm. Saturación de oxígeno: 99%. Faringe rosada sin signos inflamatorios. Resolución completa de rinorrea.\",\n  \"histTratamiento\": \"Suspender medicación. Mantener hidratación adecuada. Reposo por 2 días más. Alta médica. Regresar solo si presenta nuevos síntomas.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/api/historias-clinicas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"historias-clinicas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/historias-clinicas/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"historias-clinicas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pacDni\": \"76526929\",\n  \"pacNombre\": \"Yesenia\",\n  \"pacApellidoPaterno\": \"Ramirez\",\n  \"pacApellidoMaterno\": \"Medina\",\n  \"pacDireccion\": \"Plaza Norte\",\n  \"pacTelefono\": \"962861485\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pacDni\": \"99999999\",\n  \"pacNombre\": \"Pedro José\",\n  \"pacApellidoPaterno\": \"Ramírez\",\n  \"pacApellidoMaterno\": \"Castro\",\n  \"pacDireccion\": \"Av. Lima 789\",\n  \"pacTelefono\": \"999888777\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/api/pacientes/87654321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"pacientes",
+								"87654321"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/pacientes/87654321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"pacientes",
+								"87654321"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"medCmp\": \"88888\",\n  \"medNombre\": \"Patricia\",\n  \"medApellidos\": \"Flores Mendoza\",\n  \"espeNombre\": \"Dermatología\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"medNombre\": \"David Reyna\",\n  \"medApellidos\": \"Barretos Rodríguez\",\n  \"espeNombre\": \"Ingeniero Software\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/api/medicos/88888",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"medicos",
+								"88888"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/medicos/67890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"medicos",
+								"67890"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
